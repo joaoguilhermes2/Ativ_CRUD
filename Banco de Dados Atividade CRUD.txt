@@ -1,0 +1,35 @@
+CREATE DATABASE Atividade_CRUD;
+USE Atividade_CRUD;
+
+-- Tabela de Clientes
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(15)
+);
+
+-- Tabela de Produtos
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    estoque INT NOT NULL
+);
+
+-- Tabela de Vendedores
+CREATE TABLE vendedores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL
+);
+
+-- Tabela de Vendas
+CREATE TABLE vendas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT,
+    id_vendedor INT,
+    data_venda TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id),
+    FOREIGN KEY (id_vendedor) REFERENCES vendedores(id)
+);
