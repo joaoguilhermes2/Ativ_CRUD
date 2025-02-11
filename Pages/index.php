@@ -1,8 +1,7 @@
 <?php
-include '../Ativ_CRUD/App/DB/database.php'; // Inclua a classe Database
-include '../Ativ_CRUD/App/Classes/Cliente.php';  // Inclua a classe Cliente
+include '../Ativ_CRUD/App/DB/database.php';
+include '../Ativ_CRUD/App/Classes/Cliente.php';
 
-// Cria uma instância da classe Cliente e lista todos os clientes
 $cliente = new Cliente();
 $clientes = $cliente->listar();
 ?>

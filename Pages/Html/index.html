@@ -11,7 +11,7 @@
 
 <!-- Formulário para adicionar Cliente -->
 <h2>Adicionar Cliente</h2>
-<form action="adicionar_cliente.php" method="POST">
+<form action="../Pages/adicionar_cliente.php" method="POST">
     Nome: <input type="text" name="nome" required><br>
     E-mail: <input type="email" name="email" required><br>
     Telefone: <input type="text" name="telefone"><br>
@@ -37,7 +37,7 @@
                 <td>{$cliente_data['nome']}</td>
                 <td>{$cliente_data['email']}</td>
                 <td>{$cliente_data['telefone']}</td>
-                <td><a href='editar_cliente.php?id={$cliente_data['id']}'>Editar</a> | <a href='deletar_cliente.php?id={$cliente_data['id']}'>Deletar</a></td>
+                <td><a href='../Pages/editar_cliente.php?id={$cliente_data['id']}'>Editar</a> | <a href='../Pages/deletar_cliente.php?id={$cliente_data['id']}'>Deletar</a></td>
               </tr>";
     }
     ?>
