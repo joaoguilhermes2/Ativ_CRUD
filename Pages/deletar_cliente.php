@@ -1,5 +1,4 @@
 <?php
-include('../App/DB/database.php');
 include('../App/Classes/Cliente.php');
 
 // Verifica se o ID foi passado na URL

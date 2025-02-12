@@ -1,5 +1,4 @@
 <?php
-include('../App/DB/database.php');
 include('../App/Classes/Cliente.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -11,10 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Cria uma instância da classe Cliente
     $cliente = new Cliente();
     $cliente->criar($nome, $email, $telefone); // Chama o método para adicionar o cliente
-
-    // Redireciona para a lista de clientes
-    header('Location: index.php');
-    exit();
 }
 ?>
 
