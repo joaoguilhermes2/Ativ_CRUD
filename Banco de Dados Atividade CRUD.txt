@@ -33,3 +33,12 @@ CREATE TABLE vendas (
     FOREIGN KEY (id_cliente) REFERENCES clientes(id),
     FOREIGN KEY (id_vendedor) REFERENCES vendedores(id)
 );
+
+-- Tabela de Cliente e Produto
+CREATE TABLE cliente_produto (
+    id_cliente INT,
+    id_produto INT,
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id),
+    FOREIGN KEY (id_produto) REFERENCES produtos(id),
+    PRIMARY KEY (id_cliente, id_produto)
+);

@@ -1,4 +1,7 @@
 <?php
+
+include('../App/DB/Database.php');
+
 class Cliente {
     private $db;
 
@@ -17,6 +20,16 @@ class Cliente {
         $sql = "SELECT * FROM clientes";
         return $this->db->select($sql);
     }
+
+    // Adicionando o método listarProdutos na classe Cliente
+    public function listarProdutos($id_cliente) {
+        $sql = "SELECT p.id, p.nome, p.preco, p.estoque
+                FROM produtos p
+                INNER JOIN cliente_produto cp ON p.id = cp.id_produto
+                WHERE cp.id_cliente = ?";
+        return $this->db->select($sql, [$id_cliente]);
+    }
+
 
     // Método para buscar um cliente por ID
     public function buscar($id) {

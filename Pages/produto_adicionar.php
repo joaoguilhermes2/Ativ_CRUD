@@ -14,10 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $produto->criar($nome, $preco, $estoque, $id_cliente);
     
     echo "Produto adicionado com sucesso!";
-
-    // Redireciona de volta para a página de lista de clientes, passando o ID do cliente
-    header("Location: index.php?id_cliente=$id_cliente");
-    exit;
 }
 ?>
 
@@ -28,3 +24,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <input type="hidden" name="id_cliente" value="<?php echo $id_cliente; ?>">
     <input type="submit" value="Adicionar Produto">
 </form>
+<br>
+    <a href="index.php">Voltar para a lista de clientes</a>
