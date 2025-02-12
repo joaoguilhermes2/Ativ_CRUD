@@ -1,6 +1,6 @@
 <?php
-include '../Ativ_CRUD/App/DB/database.php'; // Inclua a classe Database
-include '../Ativ_CRUD/App/Classes/Cliente.php';  // Inclua a classe Cliente
+include('../App/DB/database.php');
+include('../App/Classes/Cliente.php');
 
 // Verifica se o ID do cliente foi passado na URL
 if (!isset($_GET['id'])) {
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Pages/Css/estilo_editar.css">
+    <link rel="stylesheet" href="../Pages/Css/estilo_editar.css">
     <title>Editar Cliente</title>
 </head>
 <body>

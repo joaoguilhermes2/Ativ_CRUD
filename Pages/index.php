@@ -1,6 +1,6 @@
 <?php
-include '../Ativ_CRUD/App/DB/database.php';
-include '../Ativ_CRUD/App/Classes/Cliente.php';
+include('../App/DB/database.php');
+include('../App/Classes/Cliente.php');
 
 $cliente = new Cliente();
 $clientes = $cliente->listar();
@@ -11,7 +11,7 @@ $clientes = $cliente->listar();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Pages/Css/estilo_index.css">
+    <link rel="stylesheet" href="../Pages/Css/estilo_index.css">
     <title>Lista de Clientes</title>
 </head>
 <body>

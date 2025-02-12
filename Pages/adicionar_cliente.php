@@ -1,6 +1,6 @@
 <?php
-include '../Ativ_CRUD/App/DB/database.php'; // Inclua a classe Database
-include '../Ativ_CRUD/App/Classes/Cliente.php';  // Inclua a classe Cliente
+include('../App/DB/database.php');
+include('../App/Classes/Cliente.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recebe os dados do formulário
