@@ -1,6 +1,6 @@
 <?php
-require_once '../Ativ_CRUD/App/Classes/Venda.php';
-require_once '../Ativ_CRUD/App/Classes/Produto.php'; // Caso queira fazer verificações com o produto
+include('../App/Classes/Venda.php');
+include('../App/Classes/Produto.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id_cliente = $_POST['id_cliente'];

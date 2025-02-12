@@ -1,5 +1,5 @@
 <?php
-require_once '../Ativ_CRUD/App/Classes/Venda.php';
+include('../App/Classes/Venda.php');
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

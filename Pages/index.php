@@ -39,6 +39,7 @@ $clientes = $cliente->listar();
                     <td>
                         <a href="editar_cliente.php?id=<?php echo $cliente_data['id']; ?>">Editar</a> |
                         <a href="deletar_cliente.php?id=<?php echo $cliente_data['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                        <a href="produto_adicionar.php?id_cliente=<?php echo $cliente_data['id']; ?>">Adicionar Produto</a>
                     </td>
                 </tr>
             <?php } ?>

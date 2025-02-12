@@ -1,5 +1,5 @@
 <?php
-require_once '../Ativ_CRUD/App/Classes/Venda.php';
+include('../App/Classes/Venda.php');
 
 $venda = new Venda();
 $vendas = $venda->listar();

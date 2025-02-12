@@ -36,5 +36,13 @@ class Venda {
                 WHERE v.id = ?";
         return $this->db->select($sql, [$id]);
     }
+
+    public function listarProdutoVendas($id_produto, $id_cliente){
+        $sql = "SELECT v.id
+                FROM vendas v
+                JOIN produtos_vendas pv ON v.id = pv.id_venda
+                WHERE pv.id_produto = ? AND v.id_cliente = ?";
+        return $this->db->select($sql, [$id_produto, $id_cliente]);
+    }
 }
 ?>

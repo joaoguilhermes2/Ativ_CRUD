@@ -1,5 +1,5 @@
 <?php
-require_once '../Ativ_CRUD/App/Classes/Produto.php';
+include('../App/Classes/Produto.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
